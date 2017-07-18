@@ -1,24 +1,6 @@
 # Robocodes: Towards Generative Street Addresses from Satellite Imagery
 
-This repo contains the code for creating generative street addresses from OSM input, as presented in our paper at the CVPR - EarthVision 2017. The naming procedure inputs .osm files, or geotiffs; and outputs new maps with hierarchical and linear addressing scheme.
-
-## Requirements
-
-1. Install ``OpenCV => 2.4.8`` C++ bindings for roadSegmentor module.
-
-Useful links for OpenCV installation:
-
-- Ubuntu: https://github.com/milq/milq/blob/master/scripts/bash/install-opencv.sh
-- OS X: http://www.pyimagesearch.com/2015/06/15/install-opencv-3-0-and-python-2-7-on-osx/
-
-2. Install python dependencies (``Python 2.7``).
-
-``pip install -r requirements.txt``
-
-## Building Robocodes
-1. Clone the repo.
-
-``$ git clone https://github.com/facebookresearch/street-addresses.git``
+This repo contains the code for creating generative street addresses from OSM input, as presented in our paper at the CVPR - EarthVision 2017. The naming procedure inputs .osm files, or geotiffs; and outputs new maps with hierarchical and linear addressing scheme. 
 
 ## Requirements
 
@@ -63,7 +45,7 @@ You can check additional functionalities with ``$ ./run_end2end.py --help``. Bel
 $ ./run_end2end.py \
  --xml ${ROBOCODE}/example/nashik.osm \
 --out_dir /<output_dir>/ \
---roadSeg_bin ${ROBOCODE}/roadSegmentor/bin/RoadConnectionLabelling
+--roadSeg_bin ${ROBOCODE}/roadSegmentor/bin/RoadConnectionLabelling 
 ```
 
 Additional OSM files can be exported from OpenStreetMap: https://www.openstreetmap.org

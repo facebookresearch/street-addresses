@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 
 
 from osgeo import gdal
-from regionCreator import py_pipeline
+from region_creator import py_pipeline
 import sys
 import subprocess
 
