@@ -1,14 +1,10 @@
 /*
- *  Copyright (c) 2017-present, Facebook, Inc.
+ *  Copyright (c) 2017, Facebook, Inc.
  *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
  *
  *  This file contains methods that utilize the flood fill algorithm.
  *  The methods in this file are utilized in SegmentationMethods.cpp file
  */
-
 
 #include "road_segmentation.h"
 
@@ -98,7 +94,8 @@ void roadFloodFillColor(Mat colorImage, Mat marked, int row, int col, int color[
 
 void findContourPixels(Mat image, Mat marked, int row, int col, vector<Point> & contourPoints)
 {
-    // Method to find boundary pixels
+    // Finds and stores all 8 connected pixels from a particular pixel at (row,col)
+
     if (row >= image.rows || col >= image.cols || row < 0 || col < 0)
         return;
 
@@ -145,14 +142,15 @@ void floodFillFindConnectedPixels(Mat image, int row, int col, vector<Point> * v
 
 void findSpikeLength(Mat image, int row, int col, vector<Point> * linePoints, int spikeLengthThresh)
 {
-    // Method to find the length of branching structure, collecting the points along
+    // returns the constituent pixelsof a line which have a length < spikeLengthThreshold
+
     if (row >= image.rows || col >= image.cols || row < 0 || col < 0)
         return;
 
     if (image.at<uchar>(row, col) == 0)
         return;
 
-    //If Point(col, row) exists in linePoints, return 0;
+    // If Point(col, row) exists in linePoints, return 0;
     if (find((*linePoints).begin(), (*linePoints).end(), Point(col, row)) != (*linePoints).end())
         return;
 

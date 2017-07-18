@@ -1,15 +1,5 @@
-/*
- *  Copyright (c) 2017-present, Facebook, Inc.
- *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
- *
- *  This file contains all relevant functions for connecting roads in an image.
- */
-
-#ifndef road_segmentation_h
-#define road_segmentation_h
+#ifndef RoadSegmentation_h
+#define RoadSegmentation_h
 
 #include <iostream>
 #include <opencv2/core/core.hpp>

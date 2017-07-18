@@ -1,9 +1,6 @@
 /*
- *  Copyright (c) 2017-present, Facebook, Inc.
+ *  Copyright (c) 2017, Facebook, Inc.
  *  All rights reserved.
- *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
  *
  *  This file contains all relevant functions for connecting roads in an image.
  */
@@ -392,7 +389,6 @@ Mat removeSpikes(Mat thinImage, int length)
 
 Mat removeSmallPixels(Mat bw)
 {
-    // Removes small blobs from a thresholded image
     Mat marked(bw.size(), CV_8U, Scalar(0));
     for (int i=0; i< bw.rows; i++)
     {

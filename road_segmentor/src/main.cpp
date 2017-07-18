@@ -1,13 +1,9 @@
 /*
- *  Copyright (c) 2017-present, Facebook, Inc.
+ *  Copyright (c) 2017, Facebook, Inc.
  *  All rights reserved.
  *
- *  This source code is licensed under the license found in the
- *  LICENSE file in the root directory of this source tree.
- *
- *  This file contains all relevant functions for connecting roads in an image.
+ *  This file contains the main code for calling road segmentation methods.
  */
-
 
 #include "road_segmentation.h"
 
@@ -38,8 +34,8 @@ int main(int argc, const char * argv[])
 
     //Convert to skeleton image
     cout << "Thinning Image";
-    Mat zhangSuen = ZhangSuenThinning(image);
-    Mat guoHall = GuoHallThinning(zhangSuen);
+    Mat zhangSuen = zhangSuenThinning(image);
+    Mat guoHall = guoHallThinning(zhangSuen);
     Mat thinImage; guoHall.copyTo(thinImage);
     cout << endl; cout << "Thinning complete." << endl;
     //imwrite(projectPath + "/3.ThinTileImage.png", thinImage);
