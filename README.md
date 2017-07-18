@@ -4,7 +4,7 @@ This repo contains the code for creating generative street addresses from OSM in
 
 ## Requirements
 
-1. Install ``OpenCV => 2.4.8`` C++ bindings for roadSegmentor module.
+1. Install ``OpenCV => 2.4.8`` C++ bindings for road_segmentor module.
 
 Useful links for OpenCV installation:
 
@@ -20,14 +20,14 @@ Useful links for OpenCV installation:
 
 ``$ git clone https://github.com/facebookresearch/street-addresses.git``
 
-2. Change directory to ``${ROBOCODE}/roadSegmentor`` and build. (``Cmake => 2.8``)
+2. Change directory to ``${ROBOCODE}/road_segmentor`` and build. (``Cmake => 2.8``)
 
 ```
 $ cmake .
 $ make
 ```
 
-Generated binary will be stored in ${ROBOCODE}/roadSegmentor/bin
+Generated binary will be stored in ${ROBOCODE}/road_segmentor/bin
 
 3. Run the following command to change the library paths.
 
@@ -45,7 +45,7 @@ You can check additional functionalities with ``$ ./run_end2end.py --help``. Bel
 $ ./run_end2end.py \
  --xml ${ROBOCODE}/example/nashik.osm \
 --out_dir /<output_dir>/ \
---roadSeg_bin ${ROBOCODE}/roadSegmentor/bin/RoadConnectionLabelling 
+--roadSeg_bin ${ROBOCODE}/road_segmentor/bin/RoadConnectionLabelling 
 ```
 
 Additional OSM files can be exported from OpenStreetMap: https://www.openstreetmap.org
@@ -56,7 +56,7 @@ Additional OSM files can be exported from OpenStreetMap: https://www.openstreetm
 $ ./run_end2end.py \
 --input_tiff ${ROBOCODE}/example/nashik.tif \
 --out_dir /<output_dir>/ \
---roadSeg_bin ${ROBOCODE}/roadSegmentor/bin/RoadConnectionLabelling
+--roadSeg_bin ${ROBOCODE}/road_segmentor/bin/RoadConnectionLabelling
 ```
 
 **Geocoding Example:** Generating Robocode when lat/lon is input.
