@@ -51,7 +51,7 @@ Mat removeSmallPixels(Mat bw);
 
 // Global variables for counting roads
 extern int totalRoadCount;
-extern vector<Point> roadLabels[90000];
+extern vector<Point> roadLabels[500000];
 
 
 #endif

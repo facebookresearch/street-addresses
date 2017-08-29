@@ -64,7 +64,7 @@ def main(xml, out_fn):
 
             if (last_pixel_row is not None and last_pixel_col is not None):
                 cv2.line(image, (pixel_col, pixel_row),
-                                    (last_pixel_col, last_pixel_row), 255, 5)
+                                    (last_pixel_col, last_pixel_row), 255, 2)
 
             last_pixel_row = pixel_row
             last_pixel_col = pixel_col

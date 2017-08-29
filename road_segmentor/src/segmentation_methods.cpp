@@ -581,14 +581,15 @@ void writeJSON(Mat image, vector<Point> roadLabelsPoints[], string filename)
     // The JSON is saved with filename as specified by the third argument.
     // The image resolution is saved in the JSON using the image input.
 
-    vector<vector<int>> roadLabelsNew[90000];
+    vector<vector<int>> roadLabelsNew[500000];
 
     for (int i = 0; i < totalRoadCount; i++)
     {
         for (int pos = 0; pos < roadLabelsPoints[i].size(); pos++)
         {
             // Some unknown elements are being found in the roadLabels array. Do not add them in the json.
-            if (roadLabelsPoints[i][pos].y < image.rows && roadLabelsPoints[i][pos].y < image.cols)
+            if (roadLabelsPoints[i][pos].y < image.rows && roadLabelsPoints[i][pos].x < image.cols &&
+                roadLabelsPoints[i][pos].y >= 0 && roadLabelsPoints[i][pos].x >= 0)
             {
                 vector<int> point;
                 point.push_back(roadLabelsPoints[i][pos].y);
