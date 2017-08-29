@@ -15,7 +15,7 @@ from osgeo import gdal
 from region_creator import py_pipeline
 import sys
 import subprocess
-
+import resources
 
 class SAFAL(object):
     """
@@ -35,6 +35,7 @@ class SAFAL(object):
         else:
             pred_img = self.out_fn + " "
         roadSegCommand = segBin + pred_img + self.out_dir
+        resources.setrlimit(resource.RLIMIT_STACK, resource.RLIM_INFINITY)
         output = subprocess.call(['bash','-c', roadSegCommand])
         if output != 0:
             self.logger.error('Road segmentation failed!')

@@ -7,8 +7,8 @@
 
 #include "road_segmentation.h"
 
-int totalRoadCount = 90000;
-vector<Point> roadLabels[90000];
+int totalRoadCount = 500000;
+vector<Point> roadLabels[500000];
 
 int main(int argc, const char * argv[])
 {
@@ -25,10 +25,12 @@ int main(int argc, const char * argv[])
     }
     resize(image, image, Size(), 0.5, 0.5, CV_INTER_AREA);
     threshold(image, image, 30, 255, CV_THRESH_BINARY);
+    //imwrite(projectPath + "/1.ThreshTileImage.png", image);
 
     //Fill empty spaces in the binary image.
     cout << "Preprocessing..." << endl;
     image = fillGapsInBinaryImage(image, 60);
+    //imwrite(projectPath + "/2.FillTileImage.png", image);
 
     //Convert to skeleton image
     cout << "Thinning Image";
@@ -36,6 +38,7 @@ int main(int argc, const char * argv[])
     Mat guoHall = guoHallThinning(zhangSuen);
     Mat thinImage; guoHall.copyTo(thinImage);
     cout << endl; cout << "Thinning complete." << endl;
+    //imwrite(projectPath + "/3.ThinTileImage.png", thinImage);
 
     cout << "Beginning road segmentation" << endl;
     //Assign road labels to individual road segments
