@@ -87,7 +87,8 @@ $ ./gen_robocode.py \
 ``Lat, Lon: 20.0230511115, 73.7822889019``
 
 ## References
-Please cite our CVPR - EarthVision Workshop paper <link coming soon> when using the code. 
+Please cite our CVPR 2017 - EarthVision Workshop paper below when using the code. 
+https://research.fb.com/publications/robocodes-towards-generative-street-addresses-from-satellite-imagery/
 
 ```bibtex
 @inproceedings{RobocodesCVPREV2017,
