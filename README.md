@@ -2,6 +2,19 @@
 
 This repo contains the code for creating generative street addresses from OSM input, as presented in our paper at the CVPR - EarthVision 2017. The naming procedure inputs .osm files, or geotiffs; and outputs new maps with hierarchical and linear addressing scheme. 
 
+(New!) ISPRS IJGI paper (full system explanation): http://www.mdpi.com/2220-9964/7/3/84
+
+CVPR EarthVision paper (best paper award): http://openaccess.thecvf.com/content_cvpr_2017_workshops/w18/papers/Demir_Robocodes_Towards_Generative_CVPR_2017_paper.pdf
+
+Facebook Research Blog: 
+https://research.fb.com/publications/robocodes-towards-generative-street-addresses-from-satellite-imagery/
+
+SOTM US Talk: https://2017.stateofthemap.us/program/generative-street-addresses.html
+
+
+Interested in satellite image understanding tasks? Take a look at our upcoming CVPR 2018 Workshop DeepGlobe at http://deepglobe.org
+
+
 ## Requirements
 
 1. Install ``OpenCV => 2.4.8`` C++ bindings for road_segmentor module.
