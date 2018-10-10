@@ -1,3 +1,10 @@
+/*
+ *  Copyright (c) 2017, Facebook, Inc.
+ *  All rights reserved.
+ *
+ *  This file contains all relevant functions for connecting roads in an image.
+ */
+
 #ifndef RoadSegmentation_h
 #define RoadSegmentation_h
 
